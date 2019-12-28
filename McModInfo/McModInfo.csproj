@@ -9,6 +9,9 @@
     <Product>Minecraft Mod Info Reader</Product>
     <Description>Read mcmod.info file in a Minecraft Mod Jar.
 Visit my github for more infomation.</Description>
+    <Version>1.0.1</Version>
+    <PackageProjectUrl>https://github.com/LiamSho/MinecraftLibSharp</PackageProjectUrl>
+    <PackageId>LiamSho.MinecraftLibSharp.McModInfo</PackageId>
   </PropertyGroup>
 
   <ItemGroup>

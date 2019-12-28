@@ -6,7 +6,7 @@ using ICSharpCode.SharpZipLib.Zip;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace ModInfo
+namespace McModInfo
 {
     public class McMod
     {
