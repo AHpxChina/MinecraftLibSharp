@@ -24,6 +24,7 @@ namespace McModInfo
             public string Parent;
             public string[] RequiredMods;
             public string[] Dependants;
+            public string Filename;
         };
         
         // a list of mod info
@@ -89,14 +90,14 @@ namespace McModInfo
                             File.Delete(ModsFolderPath + "\\ModInfoTemp\\mcmod.info");
                         }
                         File.Move(ModsFolderPath + "\\mcmod.info", ModsFolderPath + "\\ModInfoTemp\\mcmod.info");
-                        AddToList(ModsFolderPath + "\\ModInfoTemp\\mcmod.info");
+                        AddToList(ModsFolderPath + "\\ModInfoTemp\\mcmod.info", ModsJar.Name);
                     }
                 }
             }
         }
 
         // add info to list by mcmod.info file
-        private void AddToList(string Path)
+        private void AddToList(string Path, string filename)
         {
             StreamReader sr = new StreamReader(Path);
             string[] JsonString = FormatJsonString(sr.ReadToEnd());
@@ -205,6 +206,8 @@ namespace McModInfo
                     {
                         newMod.Dependants = str;
                     }
+                    //filename
+                    newMod.Filename = filename;
 
                 }
                 Mods.Add(newMod);
