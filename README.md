@@ -43,7 +43,7 @@ Visit Forge Doc to get a better understand of these attributes.
 | Credits | string | McVersion | string |
 | Parent | string | AuthorList | string[] |
 | Dependencies | string[] | RequiredMods | string[] |
-| Dependants | string[] |  |  |
+| Dependants | string[] | Filename | string |
 
 ### Account
 Unpublished Yet...
