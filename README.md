@@ -30,7 +30,7 @@ using McModInfo;
 McMod Mod = new McMod("Full Path Of Your *Mods* Folder");
 ```
 4. You can get the modid array by using ***GetModIdList()*** function. It returns a **string array**.
-5. You can get the ModInfo by using ***GetInfo("modid")*** function. The parameter is the modid. It returns a **Dictionary<string,object>**.
+5. You can get the ModInfo by using ***GetInfo("modid")*** function. The parameter is the modid. It returns a **Dictionary<string,object>** in ver1.0.1. In ver 1.0.2, it returns a **McMod.Mod** structure. The structure Keys and Values are below.
 
 The Dictionary<string,object> you get from ***GetInfo("modid")*** function contains these keys.
 
