@@ -30,33 +30,16 @@ namespace McModInfo
         private readonly List<Mod> Mods;
 
         // get info as a dictionary by modid
-        public Dictionary<string, object> GetInfo(string TargetModId)
+        public Mod GetInfo(string TargetModId)
         {
-            int keyIndex = 0;
-            foreach (Mod mod in Mods)
+            foreach(Mod target in Mods)
             {
-                if(mod.ModId== TargetModId)
+                if (target.ModId == TargetModId)
                 {
-                    break;
+                    return target;
                 }
-                keyIndex++;
             }
-            Dictionary<string, object> ModInfoDictionary = new Dictionary<string, object>();
-            {
-                ModInfoDictionary.Add("ModId", Mods[keyIndex].ModId);
-                ModInfoDictionary.Add("Name", Mods[keyIndex].Name);
-                ModInfoDictionary.Add("Description", Mods[keyIndex].Description);
-                ModInfoDictionary.Add("Version", Mods[keyIndex].Version);
-                ModInfoDictionary.Add("AuthorList", Mods[keyIndex].AuthorList);
-                ModInfoDictionary.Add("Credits", Mods[keyIndex].Credits);
-                ModInfoDictionary.Add("McVersion", Mods[keyIndex].McVersion);
-                ModInfoDictionary.Add("Dependencies", Mods[keyIndex].Dependencies);
-                ModInfoDictionary.Add("Parent", Mods[keyIndex].Parent);
-                ModInfoDictionary.Add("RequiredMods", Mods[keyIndex].RequiredMods);
-                ModInfoDictionary.Add("Dependants", Mods[keyIndex].Dependants);
-            }
-            return ModInfoDictionary;
-            
+            return new Mod();
         }
 
         // get the modid list
